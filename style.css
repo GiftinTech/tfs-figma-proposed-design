@@ -152,6 +152,11 @@ body {
     margin-bottom: 10px;
 }
 
+.fields-btn a {
+    text-decoration: none;
+    color: #000;
+}
+
 .arrow {
     width: 24px; 
     height: 18px;
@@ -323,7 +328,7 @@ body {
     list-style-type: none;
 }
 
-.desktop-header a {
+.desktop-header ul a {
     color: var(--FC);
     text-decoration: none;
 }
@@ -347,9 +352,13 @@ body {
 
 .desktop-header button:last-child {
     padding: 10px;
-    color: #000;
     min-width: 116px;
     background: linear-gradient(to left, #3EFB3A, #FBFC47);
+}
+
+.desktop-header button:last-child a {
+    text-decoration: none;
+    color: #000;
 }
 
 .intro-section {
