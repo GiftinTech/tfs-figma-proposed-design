@@ -9,129 +9,151 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <div class="ellipse-1"><img src="img/Ellipse1.svg" alt="svg"></div>
-    <div class="ellipse-3"><img src="img/Ellipse3.svg" alt="svg"></div>
     <header class="desktop-header">
       <nav>
-        <ul>
-          <li><a href="#"><img src="img/brandlogo.png" alt="Brand logo"></a></li>
-          <li><a href="#">Demos</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Pages</a></li>
-          <li><a href="#">Contact</a></li>
+        <ul class="hideOnMobile-li">
+          <li class="brand-img"><img src="img/brandlogo.png" alt="Brand logo"></li>
+          <li><a href="#" class="hideOnMobile">Demos</a></li>
+          <li><a href="#" class="hideOnMobile">About</a></li>
+          <li><a href="#" class="hideOnMobile">Blog</a></li>
+          <li><a href="#" class="hideOnMobile">Pages</a></li>
+          <li><a href="#" class="hideOnMobile">Contact</a></li>
         </ul>
-          <button class="signinBtn">Sign in</button>
-          <button><a href="index.html">Sign up</a></button>
+        <div class="hideOnMobile-btn">
+          <button class="signinBtn hideOnMobile">Sign in</button>
+          <button class="hideOnMobile"><a href="index.html">Sign up</a></button>
+        </div>
+
+        <ul class="sidebar">
+          <li class="hide-sidebar">
+              <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#e8eaed">
+                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+              </svg>
+          </li>
+          <li><a href="#demos">Demos</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#pages">Pages</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button class="signinBtn">Sign in</button></li>
+          <li><button><a href="index.html">Sign up</a></button></li>
+        </ul>
       </nav>
+      <div class="menu-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed">
+          <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+        </svg>
+      </div>
     </header>
 
-    <article class="intro-section">
-      <section>
-        <h1>The first <span class="text-gradient">AI Mentor</span></h1>
-        <p>connecting founders to warm networks.|</p>
-        <button>Call Gifty</button>
-        <button class="call-btn">Text Gifty</button>
-        <p class="video-circle-p"><img src="img/video-circle.png" alt="A video icon img" class="video-circle-img">Watch a demo</p>
+    <main>
+      <div class="ellipse-1"><img src="img/Ellipse1.svg" alt="svg"></div>
+      <div class="ellipse-3"><img src="img/Ellipse3.svg" alt="svg"></div>
+      <article class="intro-section">
+        <section>
+          <h1>The first <span class="text-gradient">AI Mentor</span></h1>
+          <p>connecting founders to warm networks.|</p>
+          <button>Call Gifty</button>
+          <button class="call-btn">Text Gifty</button>
+          <p class="video-circle-p"><img src="img/video-circle.png" alt="A video icon img" class="video-circle-img">Watch a demo</p>
+        </section>
+        <section>
+          <img src="img/profile-pic.png" alt="A picture of the AI assistant" class="ai-img">
+        </section>
+        
+      </article>
+
+      <section class="customers-section">
+        <h2>Trusted by nearly 5000+ paying customers</h2>
+        <img src="img/logos.png" alt="Logos of some trusted customers" class="logos">
       </section>
-      <section>
-        <img src="img/profile-pic.png" alt="A picture of the AI assistant" class="ai-img">
+
+      <section class="results-subscription-section">
+        <div class="ellipse-2-3"><img src="img/Ellipse3.svg" alt="svg"></div>
+        <div class="ellipse-3-4"><img src="img/Ellipse4.svg" alt="svg"></div>
+        <img src="img/results.png" alt="results image">
+        <img src="img/fifteendaytrial.png" alt="subscription image" class="sub-logo">
       </section>
       
-    </article>
+      <section class="scnd-results-subscription-section">
+        <img src="img/Frame-15.png" alt="Another subscription image" class="sub-logo">
+        <img src="img/2.png" alt="Another results image">
+      </section>
 
-    <section class="customers-section">
-      <h2>Trusted by nearly 5000+ paying customers</h2>
-      <img src="img/logos.png" alt="Logos of some trusted customers" class="logos">
-    </section>
+      <section class="brand-services-section">
+        <h2>Mixland helps you <br> build beautiful website</h2>
+        <img src="img/Frame-24.png" alt="An image with a list of the brand's services">
+        <img src="img/3.png" alt="An image with a description of the brand's services">
+      </section>
 
-    <section class="results-subscription-section">
-      <div class="ellipse-2-3"><img src="img/Ellipse3.svg" alt="svg"></div>
-      <div class="ellipse-3-4"><img src="img/Ellipse4.svg" alt="svg"></div>
-      <img src="img/results.png" alt="results image">
-      <img src="img/fifteendaytrial.png" alt="subscription image" class="sub-logo">
-    </section>
-    
-    <section class="scnd-results-subscription-section">
-      <img src="img/Frame-15.png" alt="Another subscription image" class="sub-logo">
-      <img src="img/2.png" alt="Another results image">
-    </section>
+      <article class="customers-reviews">
+        <h2>What our customers say</h2>
+        <p>Expedita, fuga et laudantium fugit adipisci maiores, necessitatibus in est cum aperiam iure, <br> aut officiis magnam quod reprehenderit! Quia perferendis fuga sint.</p>
+        <p class="img-container">
+          <img src="img/Frame-32.png" alt="An image of a customer review made on Twitter">
+          <img src="img/Frame-33.png" alt="An image of a customer review made on Twitter">
+          <img src="img/Frame-34.png" alt="An image of a customer review made on Twitter">
+          <img src="img/Frame-35.png" alt="An image of a customer review made on Twitter">
+          <img src="img/Frame-36.png" alt="An image of a customer review made on Twitter">
+          <img src="img/Frame-37.png" alt="An image of a customer review made on Twitter">
+        </p>
+        
+      </article>
 
-    <section class="brand-services-section">
-      <h2>Mixland helps you <br> build beautiful website</h2>
-      <img src="img/Frame-24.png" alt="An image with a list of the brand's services">
-      <img src="img/3.png" alt="An image with a description of the brand's services">
-    </section>
-
-    <article class="customers-reviews">
-      <h2>What our customers say</h2>
-      <p>Expedita, fuga et laudantium fugit adipisci maiores, necessitatibus in est cum aperiam iure, <br> aut officiis magnam quod reprehenderit! Quia perferendis fuga sint.</p>
-      <p class="img-container">
-        <img src="img/Frame-32.png" alt="An image of a customer review made on Twitter">
-        <img src="img/Frame-33.png" alt="An image of a customer review made on Twitter">
-        <img src="img/Frame-34.png" alt="An image of a customer review made on Twitter">
-        <img src="img/Frame-35.png" alt="An image of a customer review made on Twitter">
-        <img src="img/Frame-36.png" alt="An image of a customer review made on Twitter">
-        <img src="img/Frame-37.png" alt="An image of a customer review made on Twitter">
-      </p>
-      
-    </article>
-
-    <article class="subscription-plans">
-      <h2>Make the wise decision <br> for your business</h2>
-      <p class="h2-p">Choose from our affordable 3 packages</p>
-      <div class="packages-container">
-        <div class="plan">
-          <h3>Premium plan</h3>
-          <p class="dollar-price"><span class="plan-price">$29</span>/Month</p>
-          <p class="p-2">This package is suitable for teams <br>
-            1-100 people</p>
-          <h4>What’s incuded:</h4>
-          <p>20 GB dedicated hosting free</p>
-          <p>Best for developers, freelancer
-            1 year support</p>
-          <p>Free customer domain</p>
-          <p>Full statistics</p>
-
-          <button class="premium-plan-btn">Get started</button>
-        </div>
-        <div class="plan">
-          <h3>Basic plan</h3>
-          <p class="dollar-price"><span class="plan-price">$79</span>/Month</p>
-          <p class="p-2">This package is suitable for teams <br>
-            1-100 people</p>
+      <article class="subscription-plans">
+        <h2>Make the wise decision <br> for your business</h2>
+        <p class="h2-p">Choose from our affordable 3 packages</p>
+        <div class="packages-container">
+          <div class="plan">
+            <h3>Premium plan</h3>
+            <p class="dollar-price"><span class="plan-price">$29</span>/Month</p>
+            <p class="p-2">This package is suitable for teams <br>
+              1-100 people</p>
             <h4>What’s incuded:</h4>
-            <p>15 GB dedicated hosting free</p>
-            <p>Best for developers, freelancer
-              1 year support</p>
-            <p>Free customer domain</p>
-            <p>Basic statistics</p>
-
-
-            <button class="basic-plan-btn">Get started</button>
-        </div>
-        <div class="plan">
-          <h3>Premium plan</h3>
-          <p class="dollar-price"><span class="plan-price">$129</span>/Month</p>
-          <p class="p-2">This package is suitable for teams <br>
-            1-100 people</p>
-            <h4>What’s incuded:</h4>
-            <p>15 GB dedicated hosting free</p>
+            <p>20 GB dedicated hosting free</p>
             <p>Best for developers, freelancer
               1 year support</p>
             <p>Free customer domain</p>
             <p>Full statistics</p>
 
             <button class="premium-plan-btn">Get started</button>
-        </div>
-      </div>
+          </div>
+          <div class="plan">
+            <h3>Basic plan</h3>
+            <p class="dollar-price"><span class="plan-price">$79</span>/Month</p>
+            <p class="p-2">This package is suitable for teams <br>
+              1-100 people</p>
+              <h4>What’s incuded:</h4>
+              <p>15 GB dedicated hosting free</p>
+              <p>Best for developers, freelancer
+                1 year support</p>
+              <p>Free customer domain</p>
+              <p>Basic statistics</p>
 
-      <section class="free-trial">
-        <h3>It will help you improve your writing <br> & bring ideas more clearly.</h3>
-        <p>Start 14 days free trial</p>
-      </section>
-    </article>
+
+              <button class="basic-plan-btn">Get started</button>
+          </div>
+          <div class="plan">
+            <h3>Premium plan</h3>
+            <p class="dollar-price"><span class="plan-price">$129</span>/Month</p>
+            <p class="p-2">This package is suitable for teams <br>
+              1-100 people</p>
+              <h4>What’s incuded:</h4>
+              <p>15 GB dedicated hosting free</p>
+              <p>Best for developers, freelancer
+                1 year support</p>
+              <p>Free customer domain</p>
+              <p>Full statistics</p>
+
+              <button class="premium-plan-btn">Get started</button>
+          </div>
+        </div>
+
+        <section class="free-trial">
+          <h3>It will help you improve your writing <br> & bring ideas more clearly.</h3>
+          <p>Start 14 days free trial</p>
+        </section>
+      </article>
   </main>
 
   <footer class="brand-links">
@@ -169,5 +191,7 @@
       </ul>
     </nav>
   </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
