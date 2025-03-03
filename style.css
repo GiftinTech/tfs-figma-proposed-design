@@ -170,7 +170,8 @@ body {
 }
 
 .highlight {
-    margin: 0 auto;
+    width: 8%;
+    margin: 20px auto 40px;
 }
 
 .signin-btn {
@@ -191,6 +192,10 @@ body {
     justify-content: space-evenly;
     align-items: flex-start;
     gap: 0.50rem;
+}
+
+.socials img {
+    width: 8%;
 }
 
 .signin-google, .signin-apple {
@@ -1344,6 +1349,7 @@ main {
 }
 
 /*  I stopped at 4k responsiveness for Intro-section */
+/* Fix media query for 320, 360 and above */
 
 
 
