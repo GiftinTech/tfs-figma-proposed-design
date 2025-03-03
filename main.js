@@ -4,30 +4,26 @@ const sidebar = document.querySelector('.sidebar');
 const anchorElements = document.querySelectorAll('a');
 const backToTop = document.querySelector('.back-to-top');
 
-// Hide sidebar when page loads
-document.addEventListener('DOMContentLoaded', () => {
-  sidebar.classList.add('hidden'); 
-  hideSidebar.style.display = 'none';
-
   // Back to top button hides when the DOM loads
+document.addEventListener('DOMContentLoaded', () => {
   backToTop.classList.remove('visible');
   backToTop.classList.add('hidden');
 });
 
 // Show sidebar and replace menu button with close button
 menubar.addEventListener('click', () => {
-  sidebar.classList.add('visible');
-  menubar.classList.add('hidden');  
-  hideSidebar.classList.remove('hidden'); 
+  sidebar.classList.toggle('visible');
+  menubar.classList.toggle('hidden');  
+  hideSidebar.classList.toggle('hidden'); 
   hideSidebar.style.display = 'block';
 });
 
 // Hide sidebar and replace close button with menu button
 hideSidebar.addEventListener('click', () => {
-  sidebar.classList.remove('visible'); 
-  hideSidebar.classList.add('hidden'); 
+  sidebar.classList.toggle('visible'); 
+  hideSidebar.classList.toggle('hidden'); 
   hideSidebar.style.display = 'none';
-  menubar.classList.remove('hidden');  
+  menubar.classList.toggle('hidden');
 });
 
 // Close sidebar when clicking outside
@@ -43,6 +39,17 @@ document.addEventListener('click', (e) => {
     menubar.classList.remove('hidden');  
   }
 });
+
+// Hide sidebar on scroll
+document.addEventListener('scroll', () => {
+  if (
+    sidebar.classList.contains('visible')
+  ) {
+    sidebar.classList.remove('visible');
+    hideSidebar.classList.add('hidden'); 
+    menubar.classList.remove('hidden');  
+  }
+})
 
 // Close sidebar when a link is clicked
 anchorElements.forEach((a) => {
