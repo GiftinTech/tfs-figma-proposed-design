@@ -396,18 +396,20 @@ main {
     transform: translateY(300px);
     margin-top: -280px;
     border-bottom: 2px solid rgba(33, 33, 33, 1);
+    padding-top: 40px;
 }
 
 .intro-section h1 {
-    font: 3.5rem 'Outfit', sans-serif;
+    font: 3rem 'Outfit', sans-serif;
     font-weight: 600;
     line-height: 63px;
-    width: 55%;
+    width: 60%;
     height: auto;
 }
 
 .intro-section span {
     display: block;
+    text-wrap: nowrap;
     position: relative;
     background: linear-gradient(to left, #3EFB3A 50%, #FBFC47);
     background-clip: text;
@@ -420,7 +422,7 @@ main {
     position: absolute;
     left: 0;
     bottom: -5px; /* Adjust for underline offset */
-    width: 87%;
+    width: 100%;
     height: 4px; /* Adjust for underline thickness */
     background: linear-gradient(to left, #3EFB3A, #FBFC47);
 }
@@ -493,7 +495,7 @@ main {
 }
 
 .logos {
-    width: 922px;
+    width: 100%;
     height: auto;
     padding: 0 1rem;
 }
@@ -510,27 +512,27 @@ main {
 
 .ellipse-2-3 {
     width: 700px;
-    height: 700px;
+    height: auto;
     position: absolute;
     top: 70%;
     left: 18%;
 }
 
 .results-subscription-section img:first-child {
-    width: 438px;
-    height: 409px;
+    width: 100%;
+    height: auto;
     box-shadow: 0 6.25px 93.81px 0 rgba(0, 0, 0, 0.08);
 }
 
 .sub-logo {
-    width: 447px;
-    height: 285px;
+    width: 100%;
+    height: auto;
     margin-top: 53px;
 }
 
 .scnd-results-subscription-section img:last-child {
-    width: 474px;
-    height: 385.02px;
+    width: 100%;
+    height: auto;
     position: relative;
 }
 
