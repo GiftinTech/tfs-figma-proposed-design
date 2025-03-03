@@ -176,6 +176,7 @@ body {
 
 .signin-btn {
     display: flex;
+    justify-items: space-between;
     align-items: center;
     gap: 2rem;
     color: var(--FC);
@@ -195,7 +196,7 @@ body {
 }
 
 .socials img {
-    width: 8%;
+    width: 12%;
 }
 
 .signin-google, .signin-apple {
