@@ -475,11 +475,11 @@ main {
     margin-top: -4px;
 }
 
-.ai-img {
+.ai-img img{
     width: 333px;
     height: 310px;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.1);
 }
 
@@ -510,7 +510,7 @@ main {
     margin: 100px auto 0;
     padding: 0 1rem;
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
     justify-content: center;
     gap: 70px;
     position: relative;
@@ -789,6 +789,95 @@ main {
     font-weight: 500;
 }
 
+/* Mobile S */
+@media (min-width: 320px) {
+    .desktop-header {
+        margin-top: -3px;
+    }
+
+    .sidebar {
+        width: 70%;
+        height: 100%;
+    }
+
+    .menu-btn {
+        transform: translateX(10px);
+    }
+
+    .hide-sidebar {
+        left: 17.5rem;
+    }
+    
+    .intro-section h1 {
+        width: 80%;
+    }
+    
+    .intro-section p {
+        font-size: 0.9rem;
+    }
+    
+    .intro-section button {
+        width: 45%;
+    }
+    
+    .ai-img {
+        width: 100%;
+    }
+    
+    .customers-reviews h2 {
+        font-size: 1.3rem;
+    }
+    
+    .customers-reviews p {
+        font: 0.6rem 'Inter', sans-serif;
+        line-height: 12px;
+    }
+    
+    .img-container {
+        gap: 10px;
+        width: 260px;
+        margin-left: 0;
+        padding: 1rem 0 2rem;
+    }
+    
+    .subscription-plans h2 {
+        font-size: 1.3rem;
+        line-height: 25px;
+    }
+    
+    .subscription-plans .h2-p {
+        font-size: 0.8rem;
+    }
+
+    .plan {
+        width: 100%;
+    }
+     
+    .free-trial h3 {
+        font-size: 1rem;
+        padding: 2rem 0 1rem;
+    }
+    
+    .free-trial p {
+        font-size: 0.6rem;
+    }
+    
+}
+
+@media (min-width: 360px) {
+    .sidebar {
+        width: 50%;
+        height: 45%;
+    }
+
+    .menu-btn {
+        transform: translateX(40px);
+    }
+
+    .hide-sidebar {
+        left: 20rem;
+    }
+}
 /* Mobile M */
 @media (min-width: 375px) {
     body {
@@ -829,6 +918,14 @@ main {
     .signin-google, .signin-apple, .signin-facebook {
         width: 350px;
         height: 60px;
+    }
+
+    .menu-btn {
+        transform: translateX(62px);
+    }
+
+    .hide-sidebar {
+        left: 21rem;
     }
 }
 
@@ -876,6 +973,7 @@ main {
     }
 
     .hide-sidebar {
+        top: -4rem;
         left: 27rem;
     }
 
@@ -979,7 +1077,7 @@ main {
     }
 
     .desktop-header li:nth-child(6) {
-        margin-right: 5rem;
+        margin-right: 7rem;
     }
 
     .desktop-header div {
@@ -1006,18 +1104,222 @@ main {
     }
 
     .intro-section {
-        flex-flow: row wrap;
-        margin-top: 20px;
+        flex-direction: row;
+        transform: translateY(380px);
+    }
+    
+    .intro-section h1 {
+        font-size: 3.5rem;
+        margin-top: 2.5rem;
+        width: 50%;
+    }
+    
+    .intro-section p {
+        font-size: 1.2rem;
+    }
+
+    .intro-section button {
+        width: 30%;
+    }
+    
+    .intro-section p:last-child {
+        margin-bottom: 20%;
     }
     
     .ai-img {
-        width: 333px;
-        height: 310px;
-        border: none;
-        border-radius: 10px;
-        box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.1);
+        transform: translateX(-110px);
+        margin-right: -260px;
+        overflow-x: hidden;
+    }
+
+    .ai-img img {
+        width: 500px;
+        height: 360px;
+        border-radius: 50px;
+        box-shadow: none;
+    }
+
+    .customers-section {
+        padding: 0 3rem;
+        width: 100%;
+    }
+
+    .customers-section h2 {
+        padding: 4rem 0 2.5rem;
+    }
+
+    .results-subscription-section, 
+    .scnd-results-subscription-section  {
+        flex-direction: row;
+    }
+
+    .results-subscription-section img:nth-child(3) {
+        width: 380px;
+        padding: 0 1rem;
+    }
+
+    .results-subscription-section img:nth-child(4) {
+        width: 200px;
+        margin-left: -50px;
+        margin-bottom: 40px;
     }
     
+    .sub-logo {
+        width: 50%;
+        height: auto;
+        margin-top: 53px;
+    }
+
+    .scnd-results-subscription-section img {
+        padding: 0 1rem;
+        margin-right: -50px;
+    }
+
+    .ellipse-2-3 {
+        top: 5%;
+    }
+    
+    .ellipse-3-4 {
+        right: -20%;
+    }
+
+    .scnd-results-subscription-section img:last-child {
+        width: 300px;
+        height: auto;
+        position: relative;
+    }    
+
+    .brand-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding-left: 3rem;
+        margin: -20px 0 -60px;
+    }
+
+    .brand-logo img:first-child {
+        width: 230px;
+    }
+
+    .brand-logo img:last-child {
+        width: 430px;
+    }
+    
+    .brand-services-section h2, .customers-reviews h2,  .subscription-plans h2  {
+        font-size: 2rem;
+        line-height: 40px;
+    }
+
+    .customers-reviews {
+        width: 830px;
+        margin-left: -50px;
+    }
+    
+    .customers-reviews p, .subscription-plans .h2-p {
+        font-size: 0.5rem;
+        line-height: 15px;
+        margin-top: -20px;
+    }
+    
+    .img-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-self: center;
+        gap: 20px;
+      
+        width: 100%;
+        padding: 0.5rem 6rem 2rem;      
+    }
+
+    .packages-container {
+        flex-direction: row;
+    }
+    
+    .plan {
+        width: 300px;
+        height: auto;
+        border-radius: 15px;
+    }
+    
+    .plan h3 {
+        font-size: 1rem;
+    }
+    
+    .plan-price {
+        font-size: 2rem;
+    }
+    
+    .dollar-price {
+        font-size: 0.5rem !important;
+    }
+    
+    .plan p {
+        padding: 10px 0 0;
+        font-size: 0.8rem;
+        line-height: 15.94px;
+    }
+    
+    .p-2 {
+        margin-bottom: 15px;
+    }
+    
+    .plan h4 {
+        font-size: 1rem;
+    }
+    
+    .premium-plan-btn, .basic-plan-btn{
+        margin: 60px auto 10px;
+        width: 100%;
+        height: 70px;
+        font-size: 1.3rem;
+    }
+
+
+    .free-trial {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 85%;
+        margin-bottom: -25px;
+    }
+    
+    .free-trial h3 {
+        font-size: 1rem;
+        text-align: left;
+        padding: 1.5rem 3rem;
+    }
+    
+    .free-trial p {
+        width: 20%;
+        font-size: 0.8rem;
+        padding: 8px 2px;
+        margin-right: 50px;
+    }
+    
+    .brand-links {
+        width: 100%;
+        columns: 4;
+        column-gap: 5rem;
+    }
+
+    .brand-links ul {
+        margin: 0 0 30px;
+    }
+
+    .brand-links li {
+        margin-bottom: -18px;
+    }
+    
+    .brand-links li a {
+        font-size: 0.5rem;
+        padding-top: 0;
+    }
+    
+    .brand-links li:first-child {
+        font-size: 1rem;
+        padding-bottom: 1.3rem;
+    }
 }
 
 /* Laptop */
@@ -1100,12 +1402,172 @@ main {
         width: 220px;
     }
 
+
+    .desktop-header li {
+        padding-right: 1rem;
+        font-size: 1rem;
+    }
+
     .desktop-header li:nth-child(6) {
-        margin-right: 14.5rem;
+        margin-right: 15rem;
     }
 
     .desktop-header div {
-        margin-right: 0.25rem;
+        margin-right: -8px;
+    }
+
+    .intro-section {
+        padding: 0 2rem;
+    }
+    
+    .intro-section h1 {
+        margin-top: 3.8rem;
+        width: 50%;
+    }
+
+    .intro-section p {
+        font-size: 1.5rem;
+    }
+
+    .intro-section button {
+        width: 30%;
+    }
+    
+    .intro-section p:last-child {
+        margin-bottom: 20%;
+    }
+    
+    .ai-img {
+        width: 510px;
+    }
+
+    .ai-img img {
+        width: 540px;
+        height: 380px;
+    }
+    
+    .customers-section {
+        padding: 0 3rem;
+    }
+
+    .results-subscription-section img:nth-child(3) {
+        width: 480px;
+        padding: 0 1rem;
+    }
+
+    .results-subscription-section img:nth-child(4) {
+        width: 310px;
+        margin-left: -40px;
+    }
+    
+    .scnd-results-subscription-section img:last-child {
+        width: 400px;
+    }  
+
+    .ellipse-2-3 {
+        top: -50%;
+    }
+    
+    .ellipse-3-4 {
+        right: -20%;
+    }  
+
+    .brand-logo {
+        padding-left: 3rem;
+    }
+
+    .brand-logo img:first-child {
+        width: 280px;
+    }
+
+    .brand-logo img:last-child {
+        width: 70%;
+    }
+    
+    .brand-services-section h2, .customers-reviews h2,  .subscription-plans h2  {
+        font-size: 1.8rem;
+    }
+
+    .customers-reviews {
+        width: 1110px;
+        margin-left: -50px;
+    }
+    
+    .customers-reviews p, .subscription-plans .h2-p {
+        font-size: 0.7rem;
+    }
+    
+    .img-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-self: center;
+        gap: 30px;
+      
+        width: 100%;
+        padding: 2rem 8rem;      
+    }
+    
+    .plan {
+        width: 100%;
+        height: auto;
+        padding: 60px 30px 40px;
+    }
+    
+    .plan h3 {
+        font-size: 1.8rem;
+    }
+    
+    .plan-price {
+        font-size: 3rem;
+    }
+    
+    .dollar-price {
+        font-size: 1.5rem !important;
+    }
+    
+    .plan p {
+        padding: 30px 0 0;
+        font-size: 1.5rem;
+        line-height: 40.94px;
+    }
+    
+    .p-2 {
+        margin-bottom: 30px;
+    }
+    
+    .plan h4 {
+        font-size: 1.5rem;
+    }
+    
+    .premium-plan-btn, .basic-plan-btn{
+        margin: 60px auto 10px;
+        width: 50%;
+        height: 70px;
+        font-size: 1.3rem;
+    }
+    
+    .free-trial h3 {
+        font-size: 1.5rem;
+        padding: 2rem 0;
+    }
+    
+    .free-trial p {
+        width: 40%;
+       font-size: 1rem;
+    }
+    
+    .brand-links {
+        width: 100%;
+        columns: 4;
+    }
+    
+    .brand-links ul {
+        margin-bottom: 2rem;
+    }
+    
+    .brand-links li:first-child {
+        font-size: 1.3rem;
+        padding-bottom: 1.8rem;
     }
 }
 
@@ -1208,7 +1670,7 @@ main {
     }
 
     .desktop-header li:nth-child(6) {
-        margin-right: 10rem;
+        margin-right: 16rem;
     }
 
     .desktop-header div {
@@ -1350,7 +1812,7 @@ main {
 }
 
 /*  I stopped at 4k responsiveness for Intro-section */
-/* Fix media query for 320, 360 and above */
+/*  I stopped at 1024 responsiveness for Customer section */
 
 
 
