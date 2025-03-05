@@ -738,16 +738,17 @@ body {
     margin: 1rem auto;
 }
 
-.brand-links {
-    margin: 5rem 0 0;
+.brand-links nav {
+    margin: 5rem 100px 0 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    list-style-type: none;
 }
 
 .brand-links ul {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: flex-start;
-    list-style-type: none;
     margin-bottom: 30px;
 }
 
@@ -757,7 +758,7 @@ body {
 
 .brand-links li:first-child {
     color: rgba(220, 220, 220, 1);
-    font: 1.2rem 'Inter', sans-serif;
+    font: 0.8rem 'Inter', sans-serif;
     font-weight: 700;
     line-height: 18.04px;
     padding-bottom: 10px;
@@ -766,7 +767,7 @@ body {
 .brand-links a {
     text-decoration: none;
     color: rgba(190, 190, 190, 1);
-    font: 0.8rem 'Inter', sans-serif;
+    font: 0.5rem 'Inter', sans-serif;
     font-weight: 500;
 }
 
@@ -928,6 +929,16 @@ body {
     }
 }
 
+@media (min-width: 390px) {
+    .menu-btn {
+        transform: translateX(75px);
+    }
+
+    .hide-sidebar {
+        left: 22rem;
+    }
+}
+
 /* Mobile L */
 @media (min-width: 425px) {
     .login-header h1 {
@@ -964,7 +975,7 @@ body {
     }
 
     .menu-btn {
-        transform: translateX(150px);
+        transform: translateX(px);
     }
 
     .hide-sidebar {
@@ -1306,25 +1317,24 @@ body {
         margin-right: 50px;
     }
     
-    .brand-links {
-        width: 100%;
-        columns: 4;
-        column-gap: 5rem;
-        margin-bottom: 1rem;
-    }
-
-    .brand-links ul {
-        margin: 0 0 30px;
+    .brand-links nav {
+        margin-right: 100px;
+        gap: 60px;
     }
 
     .brand-links li a {
-        font-size: 0.5rem;
-        padding-top: 0;
+        font-size: 0.6rem;
     }
     
     .brand-links li:first-child {
         font-size: 1rem;
         padding-bottom: 1.3rem;
+    }
+}
+
+@media (min-width: 820px) {
+    .desktop-header li:nth-child(6) {
+        margin-right: 4rem;
     }
 }
 
@@ -1530,26 +1540,11 @@ body {
         height: auto;
         border-radius: 15px;
     }
-    
-    .brand-links {
-        width: 100%;
-        columns: 4;
-        column-gap: 10rem;
-        margin-bottom: -20px;
-        padding-left: 50px;
-    }
-    
-    .brand-links ul {
-        margin-bottom: 2rem;
-    }
+}
 
-    .brand-links li {
-       font-size: 1.5rem;
-    }
-    
-    .brand-links li:first-child {
-        font-size: 1.2rem;
-        padding-bottom: 1.2rem;
+@media (min-width: 1280px) {
+    .desktop-header li:nth-child(6) {
+        margin-right: 24rem;
     }
 }
 
@@ -1937,9 +1932,8 @@ body {
     }
 }
 
-/*  I stopped at 4k responsiveness for Intro-section */
-/*  I stopped at 1024 responsiveness for Customer section */
-
+/*  I stopped at 4k responsiveness
+/*
 
 
 
