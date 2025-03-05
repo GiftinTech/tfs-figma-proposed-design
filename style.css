@@ -44,8 +44,7 @@
 
 img {
     display: block;
-    width: 100%;
-    height: auto;
+    max-width: 100%;
 }
 
 button {
@@ -54,7 +53,6 @@ button {
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 body {
@@ -64,10 +62,12 @@ body {
     background-color: var(--BGCOLOR);
     color: var(--FC);
     position: relative;
+    overflow-x: hidden;
 }
 
-.ellipse-1, .ellipse-2, .ellipse-3 {
+.ellipse-1, .ellipse-2, .ellipse-3, .ellipse-2-3, .ellipse-3-4 {
     display: none;
+    width: 100%;
 }
 
 .login-header {
@@ -390,8 +390,9 @@ body {
     }
 }
 
-main {
+.desktop-main {
     margin-top: 2rem;
+    padding: 0 0.5rem;
 }
 
 .intro-section {
@@ -443,7 +444,7 @@ main {
 .intro-section button {
     display: inline;
     margin-right: 0.25rem;
-    width: 158px;
+    width: 40%;
     height: 42px;
     border: 1px solid rgba(103, 103, 103, 1);
     border-radius: 13px;
@@ -475,7 +476,7 @@ main {
     margin-top: -4px;
 }
 
-.ai-img img{
+.ai-img img {
     width: 333px;
     height: 310px;
     border: none;
@@ -516,14 +517,6 @@ main {
     position: relative;
 }
 
-.ellipse-2-3 {
-    width: 700px;
-    height: auto;
-    position: absolute;
-    top: 70%;
-    left: 18%;
-}
-
 .results-subscription-section img:first-child {
     width: 100%;
     height: auto;
@@ -540,12 +533,6 @@ main {
     width: 100%;
     height: auto;
     position: relative;
-}
-
-.ellipse-3-4 {
-    position: absolute;
-    bottom: -700px;
-    right: -5%;
 }
 
 .brand-services-section {
@@ -565,18 +552,18 @@ main {
 }
 
 .customers-reviews {
-    margin: 100px auto 0;
+    margin: 100px 0;
     padding: 0 1rem;
     background-color: rgba(37, 40, 53, 1);
-    width: 100%;
-    height: auto;
+    width: 100vw;
+    transform: translateX(-14px);
 }
 
 .customers-reviews h2 {
     padding: 40px 0 30px;
     text-align: center;
     margin: 0 auto;
-    font: 1.6rem 'Outfit', sans-serif;
+    font: 1rem 'Outfit', sans-serif;
     font-weight: 600;
     letter-spacing: 2px;
     color: var(--SCND-ALT-FC);
@@ -593,17 +580,18 @@ main {
 
 .img-container {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: center;
-    gap: 30px;
-    overflow-x: scroll;
-    width: 360px;
-    margin-left: -15px;
-    padding: 1rem 2rem 2rem 8.5rem;
+    padding: 0.5rem;
+    padding-left: 150px;
    /*  display: grid;
     grid-template-columns: repeat(3, 315px);
     justify-self: center;
     gap: 30px; */ /* Do this for desktop view */
+}
+
+.img-container img {
+    width: 45%;
 }
 
 .subscription-plans h2 {
@@ -791,13 +779,38 @@ main {
 
 /* Mobile S */
 @media (min-width: 320px) {
-    .desktop-header {
-        margin-top: -3px;
+     .ellipse-1,
+     .ellipse-3, .ellipse-2-3, 
+     .ellipse-3-4 {
+        display: block;
     }
 
-    .sidebar {
-        width: 70%;
-        height: 100%;
+    .ellipse-1 {
+        position: absolute;
+        top: 350px;
+        left: -100px; /* yellow */
+    }
+
+    .ellipse-3 {
+        position: absolute;
+        top: -30px;
+        left: 30px; /*  purple top */
+    } 
+
+    .ellipse-2-3 { /* purple bottom */
+        position: absolute;
+        top: 70%;
+        left: 0;
+    }
+    
+    .ellipse-3-4 {
+        position: absolute;
+        bottom: -700px;
+        right: -5%; /* blue */
+    }   
+
+    .desktop-header {
+        margin-top: -3px;
     }
 
     .menu-btn {
@@ -807,9 +820,15 @@ main {
     .hide-sidebar {
         left: 17.5rem;
     }
-    
+
+    .sidebar {
+        width: 40%;     
+    }
+
     .intro-section h1 {
-        width: 80%;
+        font-size: 2.5rem;
+        line-height: 42px;
+        width: 68%;
     }
     
     .intro-section p {
@@ -826,18 +845,18 @@ main {
     
     .customers-reviews h2 {
         font-size: 1.3rem;
+        margin-bottom: -20px;
     }
     
     .customers-reviews p {
-        font: 0.6rem 'Inter', sans-serif;
-        line-height: 12px;
+        font: 0.5rem 'Inter', sans-serif;
+        line-height: 10px;
+        margin-bottom: -5px;
     }
     
     .img-container {
         gap: 10px;
-        width: 260px;
-        margin-left: 0;
-        padding: 1rem 0 2rem;
+        padding: 1.5rem 2.5rem 2rem;
     }
     
     .subscription-plans h2 {
@@ -850,7 +869,7 @@ main {
     }
 
     .plan {
-        width: 100%;
+        width: 90%;
     }
      
     .free-trial h3 {
@@ -861,7 +880,6 @@ main {
     .free-trial p {
         font-size: 0.6rem;
     }
-    
 }
 
 @media (min-width: 360px) {
@@ -877,33 +895,21 @@ main {
     .hide-sidebar {
         left: 20rem;
     }
+
+    .intro-section h1 {
+        width: 70%;
+        font-size: 3rem;
+        line-height: 63px;
+    }
+
+    .customers-reviews p {
+        font-size: 0.4rem;
+    }
 }
 /* Mobile M */
 @media (min-width: 375px) {
     body {
         position: relative;
-    }
-
-    .ellipse-1, .ellipse-2, .ellipse-3 {
-        display: block;
-    }
-
-    .ellipse-1 {
-        position: absolute;
-        top: 350px;
-        left: -100px;
-    }
-
-    .ellipse-2 {
-        position: absolute;
-        top: 150px;
-        right: -100px;
-    }
-
-    .ellipse-3 {
-        position: absolute;
-        top: -30px;
-        left: 50px;
     }
 
     .login-header h1 {
@@ -952,10 +958,6 @@ main {
     .hide-sidebar {
         left: 24rem;
     }
-
-    .plan {
-        width: 370px;
-    }
 }
 
 @media (min-width: 480px) {
@@ -977,8 +979,8 @@ main {
         left: 27rem;
     }
 
-    .plan {
-        width: 420px;
+    .intro-section h1 {
+        width: 50%;
     }
 }
 
@@ -1077,7 +1079,7 @@ main {
     }
 
     .desktop-header li:nth-child(6) {
-        margin-right: 7rem;
+        margin-right: 4rem;
     }
 
     .desktop-header div {
@@ -1399,9 +1401,8 @@ main {
     }
 
     .brand-img {
-        width: 220px;
+        width: 250px;
     }
-
 
     .desktop-header li {
         padding-right: 1rem;
@@ -1409,11 +1410,11 @@ main {
     }
 
     .desktop-header li:nth-child(6) {
-        margin-right: 15rem;
+        margin-right: 23rem;
     }
 
     .desktop-header div {
-        margin-right: -8px;
+        margin-right: 5px;
     }
 
     .intro-section {
@@ -1448,20 +1449,21 @@ main {
     
     .customers-section {
         padding: 0 3rem;
+        width: 90%;
     }
 
     .results-subscription-section img:nth-child(3) {
-        width: 480px;
+        width: 50%;
         padding: 0 1rem;
     }
 
     .results-subscription-section img:nth-child(4) {
-        width: 310px;
+        width: 40%;
         margin-left: -40px;
     }
     
     .scnd-results-subscription-section img:last-child {
-        width: 400px;
+        width: 40%;
     }  
 
     .ellipse-2-3 {
@@ -1489,8 +1491,8 @@ main {
     }
 
     .customers-reviews {
-        width: 1110px;
-        margin-left: -50px;
+        width: 100vw;
+        margin-left: -30px;
     }
     
     .customers-reviews p, .subscription-plans .h2-p {
@@ -1502,71 +1504,47 @@ main {
         grid-template-columns: repeat(3, 1fr);
         justify-self: center;
         gap: 30px;
-      
-        width: 100%;
-        padding: 2rem 8rem;      
+        padding: 3rem 10rem;      
     }
-    
+
+    .img-container img {
+        width: 100%;
+    }
+
+    .subscription-plans {
+        margin: 0 -1rem;
+    }
+
+    .packages-container {
+        margin: 0 auto;
+        padding-left: 1.62rem;
+        gap: 30px;
+    }
+
     .plan {
-        width: 100%;
+        width: 300px;
         height: auto;
-        padding: 60px 30px 40px;
-    }
-    
-    .plan h3 {
-        font-size: 1.8rem;
-    }
-    
-    .plan-price {
-        font-size: 3rem;
-    }
-    
-    .dollar-price {
-        font-size: 1.5rem !important;
-    }
-    
-    .plan p {
-        padding: 30px 0 0;
-        font-size: 1.5rem;
-        line-height: 40.94px;
-    }
-    
-    .p-2 {
-        margin-bottom: 30px;
-    }
-    
-    .plan h4 {
-        font-size: 1.5rem;
-    }
-    
-    .premium-plan-btn, .basic-plan-btn{
-        margin: 60px auto 10px;
-        width: 50%;
-        height: 70px;
-        font-size: 1.3rem;
-    }
-    
-    .free-trial h3 {
-        font-size: 1.5rem;
-        padding: 2rem 0;
-    }
-    
-    .free-trial p {
-        width: 40%;
-       font-size: 1rem;
+        border-radius: 15px;
     }
     
     .brand-links {
         width: 100%;
         columns: 4;
+        column-gap: 14rem;
+        margin-bottom: -20px;
+        padding-left: 50px;
     }
     
     .brand-links ul {
         margin-bottom: 2rem;
     }
+
+    .brand-links li {
+       font-size: 1.5rem;
+    }
     
     .brand-links li:first-child {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         padding-bottom: 1.8rem;
     }
 }
@@ -1685,6 +1663,146 @@ main {
 
     .desktop-header li:last-child a {
         color: #000;
+    }
+    
+    .intro-section h1 {
+        font-size: 3.8rem;
+        margin-top: 3.5rem;
+    }
+    
+    .intro-section p {
+        font-size: 1.5rem;
+    }
+    
+    .intro-section p:last-child {
+        margin-bottom: 20%;
+        font-size: 1rem;
+        gap: 20px;
+    }
+    
+    .ai-img {
+        transform: translateX(-250px);
+        margin-right: -260px;
+    }
+
+    .ai-img img {
+        height: 430px;
+        border-radius: 50px;
+        box-shadow: none;
+    }
+
+    .customers-section {
+        padding: 0 4rem;
+        width: 80%;
+    }
+
+    .customers-section h2 {
+        padding: 4rem 0 2.5rem;
+    }
+
+
+    .results-subscription-section img:nth-child(3) {
+        width: 50%;
+        padding: 0 5rem;
+    }
+
+    .results-subscription-section img:nth-child(4) {
+        width: 40%;
+        margin-left: -50px;
+        margin-bottom: 40px;
+    }
+
+    .scnd-results-subscription-section img:last-child {
+        width: 40%;
+    }    
+
+    .scnd-results-subscription-section img {
+        padding: 0 4rem;
+    }
+
+    .brand-logo img:first-child {
+        width: 30%;
+    }
+
+    .brand-logo img:last-child {
+        width: 50%;
+    }
+
+    .customers-reviews {
+        width: 100vw;
+    }
+    
+    .customers-reviews p, .subscription-plans .h2-p {
+        font-size: 0.9rem;
+    }
+    
+    .img-container {
+        gap: 20px;
+        padding: 4rem 15rem 2rem;
+    }
+
+    .img-container img {
+        width: 100%;
+    }
+
+    .packages-container {
+        gap: 40px;
+    }
+    
+    .plan {
+        width: 370px;
+        height: auto;
+        border-radius: 15px;
+    }
+    
+    .plan h3 {
+        font-size: 1.2rem;
+    }
+    
+    .plan-price {
+        font-size: 2.5rem;
+    }
+    
+    .dollar-price {
+        font-size: 0.8rem !important;
+    }
+    
+    .plan p {
+        padding: 14px 0 0;
+        font-size: 0.9rem;
+        line-height: 20.94px;
+    }
+
+    .free-trial {
+        width: 95%;
+        padding: 2rem;
+    }
+    
+    .free-trial h3 {
+        font-size: 1.6rem;
+        padding: 1.5rem 3rem;
+    }
+    
+    .free-trial p {
+        font-size: 1rem;
+    }
+    
+    .brand-links {
+        column-gap: 10rem;
+    }
+
+    .brand-links li {
+        margin-bottom: -18px;
+        padding: 0.8rem;
+    }
+    
+    .brand-links li a {
+        font-size: 0.8rem;
+    }
+    
+    .brand-links li:first-child {
+        font-size: 1.2rem;
+        padding-bottom: 1.5rem;
     }
 }
 
